@@ -35,37 +35,37 @@
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white" aria-current="page">
+              <a href="dashboard.html" class="nav-link text-white" aria-current="page">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
                 Dashboard
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white">
+              <a href="products.html" class="nav-link text-white">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid" /></svg>
                 Products
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white">
+              <a href="state.html" class="nav-link text-white">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" /></svg>
                 State
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white">
+              <a href="category.html" class="nav-link text-white">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
                 Category
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white">
+              <a href="segment.html" class="nav-link text-white">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
                 Segment
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link active" aria-current="page">
+              <a href="city.html" class="nav-link active" aria-current="page">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
                 City
               </a>
@@ -140,7 +140,7 @@
     </div>
   </body>
   <script>
-    const ctx = document.getElementById("sales-profit-chart");
+    const profitSales = document.getElementById("sales-profit-chart");
     fetch("../json/salesdanprofitcity.json")
       .then((Response) => Response.json())
       .then((data) => {
@@ -154,7 +154,7 @@
         const total_profit = saleasProfit.map((item) => {
           return item.total_profit;
         });
-        new Chart(ctx, {
+        new Chart(profitSales, {
           type: "bar",
           data: {
             labels: City,
